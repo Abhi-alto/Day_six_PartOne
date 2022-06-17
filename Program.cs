@@ -1,18 +1,27 @@
-﻿Console.WriteLine("Enter number you want to check for Perfect number");
+﻿Console.WriteLine("Enter a number you want to check for Perfect number");
 int n = Convert.ToInt32(Console.ReadLine());
-int sum = 0;
-for (int x = 1; x <= n/2; x++)
+n = Math.Abs(n);                //If user enter negative numbers
+int c = 0;                      //counter to count factors
+if (n != 0 && n != 1)
 {
-    if(n%x==0)
+    for (int x = 2; x <= n / 2; x++)
     {
-        sum = sum + x;
+        if (n % x == 0)
+        {
+            c++;
+            break;
+        }
     }
-}
-if(sum==n)
-{
-    Console.WriteLine("Perfect number");
+    if (c == 0)
+    {
+        Console.WriteLine("Prime number");
+    }
+    else
+    {
+        Console.WriteLine("Not a prime number");
+    }
 }
 else
 {
-    Console.WriteLine("Not a perfect number");
+    Console.WriteLine("Neither prime nor composite");
 }
