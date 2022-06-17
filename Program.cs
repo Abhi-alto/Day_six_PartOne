@@ -1,10 +1,5 @@
-﻿Console.WriteLine("Enter a positive number ");
-int n = Convert.ToInt32(Console.ReadLine());
-int rev = 0;
-int num = n;
-while(num!=0)
-{
-    rev = (rev * 10) + (num%10);
-    num = num / 10;
-}
-Console.WriteLine("Reverse of " + n + " = " + rev);
+﻿using Part_one;
+Console.WriteLine("Prints distict coupon numbers from 1 to 20");
+Console.WriteLine("Enter a n for number of distinct numbers");
+int num=Convert.ToInt32(Console.ReadLine());
+cupon.distinct(num);
