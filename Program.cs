@@ -1,14 +1,18 @@
-﻿Console.WriteLine("Enter how many fibonacci numbers you want");
+﻿Console.WriteLine("Enter number you want to check for Perfect number");
 int n = Convert.ToInt32(Console.ReadLine());
-int a = 0;
-int b = 1;
-Console.WriteLine(a);
-Console.WriteLine(b);
-for (int x = 1; x <= n - 2; x++)
+int sum = 0;
+for (int x = 1; x <= n/2; x++)
 {
-    int sum = a + b;
-    a = b;
-    b = sum;
-    Console.WriteLine(sum);
+    if(n%x==0)
+    {
+        sum = sum + x;
+    }
 }
-
+if(sum==n)
+{
+    Console.WriteLine("Perfect number");
+}
+else
+{
+    Console.WriteLine("Not a perfect number");
+}
