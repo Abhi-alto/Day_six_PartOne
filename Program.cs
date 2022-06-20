@@ -1,5 +1,15 @@
-﻿using Part_one;
-Console.WriteLine("Prints distict coupon numbers from 1 to 20");
-Console.WriteLine("Enter a n for number of distinct numbers");
-int num=Convert.ToInt32(Console.ReadLine());
-cupon.distinct(num);
+﻿using System;
+using System.Diagnostics;
+
+Console.WriteLine("Welcome to the stop watch program");
+Stopwatch stopwatch = new Stopwatch();
+
+String start = Console.ReadLine();
+Console.WriteLine("Started");
+
+stopwatch.Start();                      //Start timing
+String stop = Console.ReadLine();
+stopwatch.Stop();                        // Stop timing
+Console.WriteLine("Stoped");
+Console.WriteLine("Time Elapsed : "+stopwatch.Elapsed);
+Console.ReadLine();
